@@ -1,7 +1,7 @@
 <template>
   <div class="column">
     <figure class="image is-128x128 container">
-      <img class="is-rounded" src="android-chrome-192x192.png">
+      <img class="is-rounded" src="/android-chrome-192x192.png">
     </figure>
     <h1 class="is-size-3 has-text-centered mt-2 has-text-white">Menus Disponibles</h1>
   </div>
