@@ -6,6 +6,10 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+
+const props = defineProps([
+  'menu_list',
+])
 </script>
 <template>
   <div class="flex flex-col gap-6">
@@ -18,9 +22,12 @@ import {
       <CardContent>
         <div class="grid gap-6">
           <div class="flex flex-col gap-4">
-            <Button variant="outline" class="w-full">
-              Login with Apple
-            </Button>
+            <a v-for="(menu, index) in menu_list" :key="index" :href="menu.file" target="_blank"
+              rel="noopener noreferrer">
+              <Button variant="outline" class="w-full">
+                {{ menu.nombre }}
+              </Button>
+            </a>
           </div>
         </div>
       </CardContent>
