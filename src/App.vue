@@ -1,25 +1,9 @@
-<script>
-import MenuHeader from './components/MenuHeader.vue'
-import ButtonsWrapper from './components/ButtonsWrapper.vue'
-export default {
-  components: {
-    MenuHeader,
-    ButtonsWrapper,
-  }
-}
+<script setup>
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="container">
-    <div class="columns is-centered is-flex-direction-column">
-      <MenuHeader />
-      <ButtonsWrapper />
-    </div>
-  </div>
+  <RouterView />
 </template>
 
-<style>
-body {
-  background-color: #343436;
-}
-</style>
+<style scoped></style>
