@@ -8,6 +8,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: { title: 'Menu CASAGIN' },
     },
     {
       path: '/about',
@@ -18,6 +19,10 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
   ],
+})
+
+router.afterEach((to) => {
+  document.title = to.meta.title || 'Menu'
 })
 
 export default router
